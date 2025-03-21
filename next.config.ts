@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
+import typography from "@tailwindcss/typography";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    plugins: [
+        typography
+    ]
 };
 
 export default nextConfig;
