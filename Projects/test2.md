@@ -1,1 +1,0 @@
-Ths ~is not~ strikethrough, but ~~this is~~!
