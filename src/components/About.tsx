@@ -3,8 +3,8 @@ import Image from "next/image"
 
 export default function About() {
     return (
-        <section id="about" className="flex justify-center flex-row py-40">
-            <div className="basis-1/2 content-center text-center">
+        <section id="about" className="flex md:flex-row flex-col md:justify-center items-center py-40">
+            <div className="basis-1/2 text-center">
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p className="text-lg mb-8">
                     I am a passionate software developer with a love for creating innovative solutions.

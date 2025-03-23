@@ -29,15 +29,15 @@ export default function MyHeader() {
             animate={{ y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
-            <div className=" flex items-center justify-between px-6 py-4 backdrop-blur-xl relative">
-                <div className="flex items-center gap-2">
+            <div className="flex md:flex-row flex-col items-center justify-around px-6 py-4 backdrop-blur-xl relative">
+                <div className="flex items-center">
                     <Link href="/" className="myHeader flex items-center gap-3">
                         <span className="font-extrabold text-lg">Yash Jani</span>
                     </Link>
                 </div>
 
-                <div className="absolute left-1/2 -translate-x-1/2">
-                    <nav className=" flex items-center gap-8 font-semibold">
+                <div>
+                    <nav className="flex md:gap-12 gap-3 font-semibold">
                         <Link href="/#about" className="myHeader hover:text-white transition-colors">
                             About
                         </Link>
@@ -52,7 +52,7 @@ export default function MyHeader() {
                         </Link>
                     </nav>
                 </div>
-                    <InteractiveHoverButton className="">
+                    <InteractiveHoverButton className="border-4 border-dotted border-amber-950">
                         Contact Me!
                     </InteractiveHoverButton>
                 </div>
