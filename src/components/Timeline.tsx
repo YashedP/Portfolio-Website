@@ -42,8 +42,6 @@ export default function Timeline({ projects }: { projects: Project[] }) {
         return dateB.getTime() - dateA.getTime(); // Sort in descending order
     })
     
-    console.log(projects)
-
     return (
         <></>
         // <div className="relative h-screen flex flex-col items-center py-10">

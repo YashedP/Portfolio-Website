@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 
 export default function Marquee({ skills, angle, top, left }: { skills: string[], angle: number, top: number, left: number }) {
-    console.log(`rotate-${angle}`)
     let my_skills = "";
     for (let i = 0; i < skills.length; i++) {
         my_skills += skills[i] + " ";
