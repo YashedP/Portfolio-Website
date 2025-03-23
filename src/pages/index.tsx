@@ -1,9 +1,13 @@
-import Timeline from "@/components/Timeline";
 import Header from "@/components/Header"
 import About from "@/components/About"
+import MainBlog from "@/components/MainBlog"
+import Timeline from "@/components/Timeline";
 import path from "path"
 import fs from "fs"
 import { InferGetStaticPropsType } from "next";
+import Marquee from "@/components/Marque";
+import { info } from "../../info"
+import BackgroundWrapper from "@/components/backgroundWrapper";
 
 export const getStaticProps = async () => {
     const file_path = path.join(process.cwd(), 'Projects')
@@ -16,15 +20,27 @@ export const getStaticProps = async () => {
     })
 
     return {
-        props: { content: content }
+        props: {
+            content: content,
+            skills: info.skills,
+        }
     }
 }
 
-export default function Home({ content }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({ content, skills }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
         <>
-            <Header />
-            <About />
+            <BackgroundWrapper>
+                <Header />
+                <About />
+                <MainBlog articles={["hehe"]} />
+            </BackgroundWrapper>
+            <Marquee 
+                skills={skills}
+                angle={0}
+                top={0}
+                left={0}
+            />
             <Timeline projects={content} />
         </>
     );

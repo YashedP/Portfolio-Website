@@ -26,7 +26,7 @@ const monthIndex = {
     "Dec": 11
 }
 
-const Timeline = ({ projects }: { projects: Project[] }) => {    
+export default function Timeline({ projects }: { projects: Project[] }) {    
     projects = projects.sort((a, b) => {
         const [monthA, yearStrA] = a.json.date.split(' ');
         const monthIndexValueA = monthIndex[monthA as keyof typeof monthIndex];
@@ -67,5 +67,3 @@ const Timeline = ({ projects }: { projects: Project[] }) => {
         // </div>
     );
 };
-
-export default Timeline;

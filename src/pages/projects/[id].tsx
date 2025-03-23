@@ -38,8 +38,6 @@ export const getStaticPaths = async () => {
 }
 
 const ProjectPage = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const router = useRouter();
-
     return (
         <>
             <MyHeader />

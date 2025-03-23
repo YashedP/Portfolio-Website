@@ -1,6 +1,6 @@
 import { AspectRatio } from "@radix-ui/react-aspect-ratio"
 
-const Showcase = ({ isImage, src }: { isImage: boolean, src: string }) => {
+export default function Showcase({ isImage, src }: { isImage: boolean, src: string }) {
     
     return (
         <section id="showcase" className="flex justify-center flex-row py-40">
@@ -12,5 +12,3 @@ const Showcase = ({ isImage, src }: { isImage: boolean, src: string }) => {
         </section>
     )
 }
-
-export default Showcase

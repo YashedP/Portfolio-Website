@@ -1,10 +1,10 @@
 import { AspectRatio } from "@radix-ui/react-aspect-ratio"
 import Image from "next/image"
 
-const About = () => {
+export default function About() {
     return (
         <section id="about" className="flex justify-center flex-row py-40">
-            <div className="text-center">
+            <div className="basis-1/2 content-center text-center">
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p className="text-lg mb-8">
                     I am a passionate software developer with a love for creating innovative solutions.
@@ -13,14 +13,19 @@ const About = () => {
                     I enjoy working with modern technologies and continuously learning new skills.
                 </p>
             </div>
-            <div className="w-[450px]">
-                <AspectRatio ratio={1 / 1}>
-                    <Image src="/IMG_7229.jpeg" alt="Image" fill className="rounded-md object-cover"/>
-                </AspectRatio>
+
+            <div className="w-[400px] h-[480px]">
+                <div className="relative shadow-lg">
+                    <AspectRatio ratio={2.5 / 3}>
+                    <Image 
+                        src="/IMG_7229.jpeg" 
+                        alt="Image" 
+                        fill 
+                        className="rounded-md object-cover" 
+                    />
+                    </AspectRatio>
+                </div>
             </div>
-            <img src="/travelamulet/timeline.png" alt="Image" className="rounded-md object-cover"/>
         </section>
     )
 }
-
-export default About;
