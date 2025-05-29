@@ -5,7 +5,7 @@ import Timeline from "@/components/Timeline";
 import path from "path"
 import fs from "fs"
 import { InferGetStaticPropsType } from "next";
-import Marquee from "@/components/Marque";
+import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { info } from "../../info"
 import BackgroundWrapper from "@/components/backgroundWrapper";
 
@@ -35,12 +35,13 @@ export default function Home({ content, skills }: InferGetStaticPropsType<typeof
                 <About />
                 <MainBlog articles={["hehe"]} />
             </BackgroundWrapper>
-            <Marquee 
-                skills={skills}
-                angle={0}
-                top={0}
-                left={0}
-            />
+            <VelocityScroll 
+                defaultVelocity={1}
+                numRows={2}
+                className="text-neutral-400"
+            >
+                {skills.join(" ")}
+            </VelocityScroll>
             <Timeline projects={content} />
         </>
     );

@@ -15,14 +15,14 @@ export default function About() {
             </div>
 
             <div className="w-[400px] h-[480px]">
-                <div className="relative shadow-lg">
+                <div className="relative shadow-2xl rounded-xl bg-white p-3 border-2 border-neutral-200">
                     <AspectRatio ratio={2.5 / 3}>
-                    <Image 
-                        src="/IMG_7229.jpeg" 
-                        alt="Image" 
-                        fill 
-                        className="rounded-md object-cover" 
-                    />
+                        <Image 
+                            src="/IMG_7229.jpeg" 
+                            alt="Image" 
+                            fill 
+                            className="rounded-lg object-cover shadow-lg" 
+                        />
                     </AspectRatio>
                 </div>
             </div>
